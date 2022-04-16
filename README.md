@@ -1,7 +1,6 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# Crypto - App
+Proyecto creado con npm y React.
+utiliza la librería crypto-
 ## Available Scripts
 
 In the project directory, you can run:

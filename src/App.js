@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React, {  useState} from 'react';
 import './App.css';
+import { CryptoComponent } from './Crypto.component';
+import { DescriptionComponent } from './Description.component';
 
 function App() {
+  const [currentHashingMethod, setCurrentHashingMethod] = useState('SHA256');
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+         <p>Cripto app!</p>
       </header>
+
+      <body>
+        <div className='bodyContainer'>
+          <CryptoComponent onHashingMethodChanged={setCurrentHashingMethod}/>
+          <DescriptionComponent currentHashingMethod={currentHashingMethod}/>
+        </div>
+      </body>
+
+      <footer>
+        <p>footer</p>
+      </footer>
     </div>
   );
 }
